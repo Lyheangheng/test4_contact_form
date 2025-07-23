@@ -1,110 +1,132 @@
-{% extends 'base.html' %} 
-{% block title %}name{% endblock title %}
-{% block content%}
-<main>
-    <div class="container">
-        <!-- Gojo Satoru Profile -->
-        <div class="character-card" id="gojo-card">
-            <div class="card-background gojo-bg"></div>
-            <div class="card-overlay"></div>
-            
-            <div class="card-content">
-                <div class="profile-header">
-                    <div class="profile-info">
-                        <h3 class="character-name">GOJO<br>SATORU</h3>
-                        <div class="character-meta">
-                            <span class="series-tag">呪術廻戦</span>
-                            <div class="rating">
-                                <div class="stars">
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                </div>
-                                <span class="rating-text">Popular choice</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="character-main-image">
-                        <div class="main-portrait gojo-portrait"></div>
-                        <div class="hand-gesture gojo-hand"></div>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hinata Shouyou - Wing Spiker{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/css/character_showcase.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="character-showcase">
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-dots"></div>
+    </div>
+
+    <!-- Main Character Section -->
+    <div class="character-main">
+        <div class="character-info">
+            <div class="character-header">
+                <h1 class="character-name">
+                BMW<br>
+                    I8.
+                </h1>
+                <div class="character-position">
+                    <span class="position-label">BMW</span>
+                </div>
+            </div>
+
+            <div class="character-description">
+                <p>The BMW i8 is a groundbreaking plug-in hybrid sports car that combines futuristic design with cutting-edge technology. Its aerodynamic body, signature scissor doors, and sleek lines make it instantly recognizable. Powered by a turbocharged 1.5-liter engine paired with an electric motor, the i8 delivers a combined 369 horsepower, reaching 0–100 km/h in just 4.4 seconds. With a top speed of 250 km/h and an electric range of up to 55 km, it offers thrilling performance with eco-friendly efficiency. Built with lightweight carbon fiber and equipped with all-wheel drive, the BMW i8 is the perfect blend of sustainability, style, and speed.</p>
+            </div>
+
+            <!-- Character Stats -->
+            <div class="character-stats">
+                <div class="stat-item">
+                    <span class="stat-label"> 🏁 Top Speed</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="85"></div>
                     </div>
                 </div>
-                
-                <div class="gallery-section">
-                    <div class="gallery-thumbnails">
-                        <div class="thumbnail active" data-image="gojo-1"></div>
-                        <div class="thumbnail" data-image="gojo-2"></div>
-                        <div class="thumbnail" data-image="gojo-3"></div>
-                        <div class="thumbnail" data-image="gojo-4"></div>
+                <div class="stat-item">
+                    <span class="stat-label">⚡ 0–100 km/h (0–62 mph)</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="95"></div>
                     </div>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-icon">⚡</span>
-                            <span class="stat-value">95</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">🔥</span>
-                            <span class="stat-value">100</span>
-                        </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🐎 Horsepower</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="98"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🔋 Electric Range</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="70"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🛢️ Fuel Economy</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="65"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">⚙️ Torque</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="90"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Ryomen Sukuna Profile -->
-        <div class="character-card" id="sukuna-card">
-            <div class="card-background sukuna-bg"></div>
-            <div class="card-overlay"></div>
+        <!-- Main Character Image -->
+        <div class="character-image-container">
+            <div class="character-main-image">
+                <img src="static/img/bmw.png" class="main-character-img car-img">
+            </div>
             
-            <div class="card-content">
-                <div class="profile-header">
-                    <div class="profile-info">
-                        <h3 class="character-name">RYOMEN<br>SUKUNA</h3>
-                        <div class="character-meta">
-                            <span class="series-tag">呪術廻戦</span>
-                            <div class="rating">
-                                <div class="stars">
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                    <span class="star active">★</span>
-                                </div>
-                                <span class="rating-text">King of Curses</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="character-main-image">
-                        <div class="main-portrait sukuna-portrait"></div>
-                    </div>
-                </div>
-                
-                <div class="gallery-section">
-                    <div class="gallery-thumbnails">
-                        <div class="thumbnail active" data-image="sukuna-1"></div>
-                        <div class="thumbnail" data-image="sukuna-2"></div>
-                        <div class="thumbnail" data-image="sukuna-3"></div>
-                        <div class="thumbnail" data-image="sukuna-4"></div>
-                    </div>
-                    
-                    <div class="stats">
-                        <div class="stat-item">
-                            <span class="stat-icon">💀</span>
-                            <span class="stat-value">100</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">👑</span>
-                            <span class="stat-value">100</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Floating Action Lines -->
+            <div class="action-lines">
+                <div class="action-line line-1"></div>
+                <div class="action-line line-2"></div>
+                <div class="action-line line-3"></div>
             </div>
         </div>
     </div>
-</main>
+
+    <!-- Character Cards Section -->
+    <div class="character-cards">
+        <div class="character-card" data-character="tsukishima">
+            <div class="card-image">
+                <img src="{% static 'images/tsukishima.png' %}" alt="Tsukishima Kei">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">TSUKISHIMA KEI</h3>
+                <p class="card-position">BLOCKER</p>
+                <button class="card-btn">View Profile</button>
+            </div>
+        </div>
+
+        <div class="character-card" data-character="nishinoya">
+            <div class="card-image">
+                <img src="{% static 'images/nishinoya.png' %}" alt="Nishinoya Yuu">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">NISHINOYA YUU</h3>
+                <p class="card-position">LIBERO</p>
+                <button class="card-btn">View Profile</button>
+            </div>
+        </div>
+
+        <div class="character-card" data-character="kageyama">
+            <div class="card-image">
+                <img src="{% static 'images/kageyama.png' %}" alt="Kageyama Tobio">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">KAGEYAMA</h3>
+                <p class="card-position">SETTER</p>
+                <button class="card-btn">View Profile</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'assets/character_showcase.js' %}"></script>
 {% endblock %}

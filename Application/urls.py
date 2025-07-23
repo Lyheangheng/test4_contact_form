@@ -22,8 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('', views.index, name='home'),
-    path('', views.index, name='index'),
-    path('about.html', views.about, name='about'),
-   	path('contact.html', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('characters/', views.characters, name='characters'),
+    path('contact.html', views.contact, name='contact'),
+    path('', views.index, name='home'),  # Keeping only one home route
 ]
