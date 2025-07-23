@@ -1,0 +1,110 @@
+{% extends 'base.html' %} 
+{% block title %}name{% endblock title %}
+{% block content%}
+<main>
+    <div class="container">
+        <!-- Gojo Satoru Profile -->
+        <div class="character-card" id="gojo-card">
+            <div class="card-background gojo-bg"></div>
+            <div class="card-overlay"></div>
+            
+            <div class="card-content">
+                <div class="profile-header">
+                    <div class="profile-info">
+                        <h3 class="character-name">GOJO<br>SATORU</h3>
+                        <div class="character-meta">
+                            <span class="series-tag">呪術廻戦</span>
+                            <div class="rating">
+                                <div class="stars">
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                </div>
+                                <span class="rating-text">Popular choice</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="character-main-image">
+                        <div class="main-portrait gojo-portrait"></div>
+                        <div class="hand-gesture gojo-hand"></div>
+                    </div>
+                </div>
+                
+                <div class="gallery-section">
+                    <div class="gallery-thumbnails">
+                        <div class="thumbnail active" data-image="gojo-1"></div>
+                        <div class="thumbnail" data-image="gojo-2"></div>
+                        <div class="thumbnail" data-image="gojo-3"></div>
+                        <div class="thumbnail" data-image="gojo-4"></div>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">⚡</span>
+                            <span class="stat-value">95</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🔥</span>
+                            <span class="stat-value">100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ryomen Sukuna Profile -->
+        <div class="character-card" id="sukuna-card">
+            <div class="card-background sukuna-bg"></div>
+            <div class="card-overlay"></div>
+            
+            <div class="card-content">
+                <div class="profile-header">
+                    <div class="profile-info">
+                        <h3 class="character-name">RYOMEN<br>SUKUNA</h3>
+                        <div class="character-meta">
+                            <span class="series-tag">呪術廻戦</span>
+                            <div class="rating">
+                                <div class="stars">
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                    <span class="star active">★</span>
+                                </div>
+                                <span class="rating-text">King of Curses</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="character-main-image">
+                        <div class="main-portrait sukuna-portrait"></div>
+                    </div>
+                </div>
+                
+                <div class="gallery-section">
+                    <div class="gallery-thumbnails">
+                        <div class="thumbnail active" data-image="sukuna-1"></div>
+                        <div class="thumbnail" data-image="sukuna-2"></div>
+                        <div class="thumbnail" data-image="sukuna-3"></div>
+                        <div class="thumbnail" data-image="sukuna-4"></div>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">💀</span>
+                            <span class="stat-value">100</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">👑</span>
+                            <span class="stat-value">100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
