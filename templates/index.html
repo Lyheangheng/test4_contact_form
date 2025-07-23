@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Hinata Shouyou - Wing Spiker{% endblock %}
+{% block title %}Cars Model Display{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'assets/css/character_showcase.css' %}">
@@ -25,7 +25,7 @@
                     I8.
                 </h1>
                 <div class="character-position">
-                    <span class="position-label">BMW</span>
+                    <span class="position-label">VIew Car</span>
                 </div>
             </div>
 
@@ -91,36 +91,275 @@
 
     <!-- Character Cards Section -->
     <div class="character-cards">
-        <div class="character-card" data-character="tsukishima">
+        <div class="character-card" data-character="BMW M440i">
             <div class="card-image">
-                <img src="{% static 'images/tsukishima.png' %}" alt="Tsukishima Kei">
+                <img src="{% static 'img/m-440i.png' %}" alt="BMW M440i">
             </div>
             <div class="card-info">
-                <h3 class="card-name">TSUKISHIMA KEI</h3>
-                <p class="card-position">BLOCKER</p>
-                <button class="card-btn">View Profile</button>
+                <h3 class="card-name">BMW M440i</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
             </div>
         </div>
 
-        <div class="character-card" data-character="nishinoya">
+        <div class="character-card" data-character="BMW M4 GT3 Evo">
             <div class="card-image">
-                <img src="{% static 'images/nishinoya.png' %}" alt="Nishinoya Yuu">
+                <img src="{% static 'img/m4-gt3evo.png' %}" alt="BMW M4 GT3 Evo">
             </div>
             <div class="card-info">
-                <h3 class="card-name">NISHINOYA YUU</h3>
-                <p class="card-position">LIBERO</p>
-                <button class="card-btn">View Profile</button>
+                <h3 class="card-name">BMW M4 GT3 Evo</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
             </div>
         </div>
 
         <div class="character-card" data-character="kageyama">
             <div class="card-image">
-                <img src="{% static 'images/kageyama.png' %}" alt="Kageyama Tobio">
+                <img src="{% static 'img/BMW_g80_m3_Adro.png' %}" alt="img/BMW G80 M3 Adro">
             </div>
             <div class="card-info">
-                <h3 class="card-name">KAGEYAMA</h3>
-                <p class="card-position">SETTER</p>
-                <button class="card-btn">View Profile</button>
+                <h3 class="card-name">BMW G80 M3 Adro</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %} Porsche {% endcomment %}
+<div class="div-seperation "> <h1>View More Cars Model Below</h1></div>
+<div class="character-showcase">
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-dots"></div>
+    </div>
+
+    <!-- Main Character Section -->
+    <div class="character-main">
+        <div class="character-info">
+            <div class="character-header">
+                <h1 class="character-name">
+                PORSCHE<br>
+                    911.
+                </h1>
+                <div class="character-position">
+                    <span class="position-label">View Car</span>
+                </div>
+            </div>
+
+            <div class="character-description">
+                <p>The Porsche 911 is an iconic high-performance sports car that blends timeless design with cutting-edge engineering. First launched in 1964, it features a distinctive rear-engine layout and sleek, aerodynamic curves. Known for its precision handling and powerful flat-six engine, the 911 offers an unmatched driving experience. It’s available in various trims, from the elegant Carrera to the track-ready Turbo and GT3 models. The 911 remains a symbol of luxury, speed, and engineering excellence.</p>
+            </div>
+
+            <!-- Character Stats -->
+            <div class="character-stats">
+                <div class="stat-item">
+                    <span class="stat-label"> 🏁 Top Speed</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="85"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">⚡ 0–100 km/h (0–62 mph)</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="95"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🐎 Horsepower</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="98"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🔋 Electric Range</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="70"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🛢️ Fuel Economy</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="65"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">⚙️ Torque</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Character Image -->
+        <div class="character-image-container">
+            <div class="character-main-image">
+                <img src="static/img/911.png" class="main-character-img car-img">
+            </div>
+            
+            <!-- Floating Action Lines -->
+            <div class="action-lines">
+                <div class="action-line line-1"></div>
+                <div class="action-line line-2"></div>
+                <div class="action-line line-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Cards Section -->
+    <div class="character-cards">
+        <div class="character-card" data-character="TAYCAN">
+            <div class="card-image">
+                <img src="{% static 'img/taycan.png' %}" alt="TAYCAN">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">PORSCHE TAYCAN</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="character-card" data-character="MAYCAN">
+            <div class="card-image">
+                <img src="{% static 'img/maycan.png' %}" alt="PORSCHE MAYCAN">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">PORSCHE MAYCAN</h3>
+                <p class="card-position">SUV</p>
+                <button class="card-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="character-card" data-character="GT4">
+            <div class="card-image">
+                <img src="{% static 'img/GT4.png' %}" alt="GT4">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">PORSCHE GT4</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %} Ferrari {% endcomment %}
+<div class="character-showcase">
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-dots"></div>
+    </div>
+
+    <!-- Main Character Section -->
+    <div class="character-main">
+        <div class="character-info">
+            <div class="character-header">
+                <h1 class="character-name">
+                Ferrari<br>
+                    LaFerrari.
+                </h1>
+                <div class="character-position">
+                    <span class="position-label">View Car</span>
+                </div>
+            </div>
+
+            <div class="character-description">
+                <p>The Ferrari LaFerrari is a futuristic hypercar that blends raw power with hybrid technology. Its sleek, sculpted body is built for both speed and aerodynamic efficiency. Under the hood, it packs a monstrous V12 engine boosted by an electric motor, delivering nearly 1,000 horsepower. With lightning-fast acceleration and precise handling, LaFerrari feels like a race car made for the road. It's rare, aggressive, and a true symbol of Ferrari's engineering mastery.</p>
+            </div>
+
+            <!-- Character Stats -->
+            <div class="character-stats">
+                <div class="stat-item">
+                    <span class="stat-label"> 🏁 Top Speed</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="85"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">⚡ 0–100 km/h (0–62 mph)</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="95"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🐎 Horsepower</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="98"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🔋 Electric Range</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="70"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">🛢️ Fuel Economy</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="65"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">⚙️ Torque</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" data-value="90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Character Image -->
+        <div class="character-image-container">
+            <div class="character-main-image">
+                <img src="static/img/ferrari-1.png" class="main-character-img car-img">
+            </div>
+            
+            <!-- Floating Action Lines -->
+            <div class="action-lines">
+                <div class="action-line line-1"></div>
+                <div class="action-line line-2"></div>
+                <div class="action-line line-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Cards Section -->
+    <div class="character-cards">
+        <div class="character-card" data-character="SF90">
+            <div class="card-image">
+                <img src="{% static 'img/sf90.png' %}" alt="Ferrari SF90">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">Ferrari SF90</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="character-card" data-character="SF90XX">
+            <div class="card-image">
+                <img src="{% static 'img/sf90xx.png' %}" alt="Ferrari SF90XX">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">Ferrari SF90XX</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="character-card" data-character="488">
+            <div class="card-image">
+                <img src="{% static 'img/488.png' %}" alt="Ferrari 488">
+            </div>
+            <div class="card-info">
+                <h3 class="card-name">Ferrari 488</h3>
+                <p class="card-position">SPORT</p>
+                <button class="card-btn">View More</button>
             </div>
         </div>
     </div>

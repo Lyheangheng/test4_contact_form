@@ -1,10 +1,232 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}About{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'assets/css/character_showcase.css' %}">
+<style>
+    .about-hero {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        color: #fff;
+        padding: 80px 0 60px 0;
+        text-align: center;
+        position: relative;
+    }
+    .about-hero .about-title {
+        font-size: 4rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
+    }
+    .about-hero .about-subtitle {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+        opacity: 0.8;
+    }
+    .about-hero .about-hero-img {
+        width: 350px;
+        max-width: 90vw;
+        border-radius: 30px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        margin-bottom: 30px;
+    }
+    .about-section {
+        background: rgba(255,255,255,0.03);
+        border-radius: 30px;
+        margin: 40px auto;
+        padding: 60px 40px;
+        max-width: 1100px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .about-section h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #ff6b35;
+    }
+    .about-section p {
+        font-size: 1.2rem;
+        line-height: 2;
+        margin-bottom: 30px;
+        color: #fff;
+        opacity: 0.85;
+    }
+    .about-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .feature-card {
+        background: rgba(255,255,255,0.07);
+        border-radius: 20px;
+        padding: 30px 25px;
+        width: 320px;
+        color: #fff;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        text-align: left;
+        transition: transform 0.3s;
+    }
+    .feature-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 16px 48px rgba(255,107,53,0.15);
+    }
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 18px;
+        color: #ff6b35;
+    }
+    .feature-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .feature-desc {
+        font-size: 1.05rem;
+        opacity: 0.85;
+    }
+    .about-timeline {
+        margin: 60px auto 0 auto;
+        max-width: 900px;
+        padding: 0 20px;
+    }
+    .timeline {
+        border-left: 4px solid #ff6b35;
+        padding-left: 30px;
+        position: relative;
+    }
+    .timeline-event {
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timeline-event::before {
+        content: '';
+        position: absolute;
+        left: -38px;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background: #ff6b35;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ff6b35;
+    }
+    .timeline-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #ff6b35;
+        margin-bottom: 8px;
+    }
+    .timeline-desc {
+        font-size: 1.05rem;
+        color: #fff;
+        opacity: 0.85;
+    }
+    .about-footer {
+        background: #0f3460;
+        color: #fff;
+        padding: 60px 0 40px 0;
+        text-align: center;
+        border-radius: 0 0 30px 30px;
+        margin-top: 60px;
+    }
+    @media (max-width: 900px) {
+        .about-section { padding: 40px 10px; }
+        .about-features { gap: 20px; }
+        .feature-card { width: 100%; }
+    }
+    @media (max-width: 600px) {
+        .about-hero .about-title { font-size: 2.2rem; }
+        .about-section h2 { font-size: 1.5rem; }
+    }
+</style>
+{% endblock %}
 
 {% block content %}
-<div class="container mt-5 pt-5">
-    <h1>About</h1>
-    <p>This is the about page.</p>
+<div class="about-hero">
+    <img src="{% static 'img/about-hero.jpg' %}" alt="BMW About" class="about-hero-img">
+    <h1 class="about-title">Discover the BMW Showcase</h1>
+    <div class="about-subtitle">A Journey Through Innovation, Passion, and Performance</div>
+</div>
+<div class="about-section">
+    <h2>Our Vision</h2>
+    <p>BMW Showcase is more than a gallery—it's a celebration of the relentless pursuit of excellence. Our vision is to create a space where automotive enthusiasts, designers, and dreamers unite to explore the stories, technology, and artistry behind every BMW. We believe in the power of innovation and the thrill of driving, and we strive to share that passion with the world.</p>
+    <p>From the first sketches to the final test drive, every BMW is a testament to human ingenuity. Our platform brings you closer to the process, the people, and the legacy that make BMW a global icon.</p>
+    <div class="about-features">
+        <div class="feature-card">
+            <div class="feature-icon">🚗</div>
+            <div class="feature-title">Model Explorer</div>
+            <div class="feature-desc">Dive into detailed profiles of BMW's most celebrated models, including technical specs, design highlights, and performance stats.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <div class="feature-title">Global Community</div>
+            <div class="feature-desc">Connect with fellow enthusiasts, share your stories, and participate in exclusive events and forums.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Innovation Hub</div>
+            <div class="feature-desc">Stay updated on the latest BMW technologies, from hybrid engines to smart connectivity and sustainable materials.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <div class="feature-title">Achievements</div>
+            <div class="feature-desc">Explore BMW's journey through motorsport victories, design awards, and groundbreaking milestones.</div>
+        </div>
+    </div>
+</div>
+<div class="about-section">
+    <h2>Our Timeline</h2>
+    <div class="about-timeline">
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-title">2013: The Vision Begins</div>
+                <div class="timeline-desc">BMW unveils the i8 concept, setting a new standard for hybrid sports cars and futuristic design.</div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-title">2015: Community Grows</div>
+                <div class="timeline-desc">Our online platform launches, bringing together fans and experts from around the world.</div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-title">2018: Innovation Milestone</div>
+                <div class="timeline-desc">BMW introduces advanced electric models and smart features, expanding the showcase and inspiring new generations.</div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-title">2022: The Future Unfolds</div>
+                <div class="timeline-desc">BMW Showcase reaches over 100,000 members, hosting virtual events and launching interactive galleries.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-section">
+    <h2>Meet the Team</h2>
+    <p>Our team is a blend of engineers, designers, writers, and car enthusiasts. Each member brings a unique perspective and skill set, united by a love for BMW and a commitment to excellence. We work tirelessly to curate content, develop new features, and engage with our community.</p>
+    <div class="about-features">
+        <div class="feature-card">
+            <div class="feature-icon">👨‍💻</div>
+            <div class="feature-title">Alex - Founder</div>
+            <div class="feature-desc">Visionary, developer, and lifelong BMW fan. Alex leads the team with creativity and technical expertise.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Mia - Designer</div>
+            <div class="feature-desc">Mia crafts the visual identity of the showcase, ensuring every page is beautiful and user-friendly.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <div class="feature-title">Sam - Writer</div>
+            <div class="feature-desc">Sam brings stories to life, from technical breakdowns to interviews with BMW owners and experts.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <div class="feature-title">Liam - Engineer</div>
+            <div class="feature-desc">Liam ensures the accuracy of our technical content and helps test new features for the platform.</div>
+        </div>
+    </div>
+</div>
+<div class="about-footer">
+    <h2>Join the Journey</h2>
+    <p>BMW Showcase is always evolving. We invite you to join our community, share your passion, and help shape the future of automotive appreciation. Whether you're a seasoned expert or a curious newcomer, there's a place for you here.</p>
+    <p>Contact us, follow our updates, and become part of the story. Thank you for being part of the BMW Showcase!</p>
 </div>
 {% endblock %}
